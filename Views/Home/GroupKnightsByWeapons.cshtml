@@ -1,0 +1,35 @@
+﻿@model Knights.Models.ViewModels.KnightsWeaponsViewModel;
+
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div class="text-center">
+    <h2 class="display-4">Knights & their weapons</h2>
+    <table>
+        <tr>
+            <th><strong>Name</strong></th>
+            <th><strong>Weapon</strong></th>
+        </tr>
+
+        @foreach (var knight in Model.KnightName)
+        {
+
+            <tr>
+                <th>@knight</th>
+
+            </tr>
+
+        }
+
+        @foreach (var weapon in Model.WeaponName)
+        {
+
+            <tr>
+                <th>@weapon</th>
+
+            </tr>
+        }
+
+    </table>
+</div>

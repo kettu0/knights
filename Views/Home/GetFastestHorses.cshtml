@@ -1,0 +1,32 @@
+﻿
+@{
+    ViewData["Title"] = "The fastest horses";
+}
+<div class="text-center">
+    <h2 class="display-4">The fastest horses</h2>
+    <table>
+        <tr>
+            <th><strong>No.</strong></th>
+            <th><strong>Id</strong></th>
+            <th><strong>Name</strong></th>
+            <th><strong>Color</strong></th>
+            <th><strong>Speed</strong></th>
+            <th><strong>Owner</strong></th>
+        </tr>
+        @{ var n = 0;
+        @foreach (var horse in Model)
+        {
+             n += 1;
+    <tr>
+        <th>@n</th>
+        <th>@horse.Id</th>
+        <th>@horse.Name</th>
+        <th>@horse.Color</th>
+        <th>@horse.Speed</th>
+        <th>@horse.Owner.Name</th>
+    </tr>
+
+            }
+        }
+    </table>
+</div>

@@ -1,0 +1,91 @@
+﻿@model KnightsHorsesVowWeaponsViewModel;
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div class="text-center">
+    <h2 class="display-4">Knights</h2>
+    <table>
+        <tr>
+            <th><strong>Id</strong></th>
+            <th><strong>Name</strong></th>
+            <th><strong>Land</strong></th>
+            <th><strong>Castle</strong></th>
+            <th><strong>Steed</strong></th>
+        </tr>
+        @foreach (var knight in Model.Knights)
+        {
+            <tr>
+                <th>@knight.Id</th>
+                <th>@knight.Name</th>
+                <th>@knight.Land</th>
+                <th>@knight.Castle</th>
+                <th>@knight.Steed.Name</th>
+            </tr>
+
+        }
+    </table>
+
+    <h2 class="display-4">Horses</h2>
+    <table>
+        <tr>
+            <th><strong>Id</strong></th>
+            <th><strong>Name</strong></th>
+            <th><strong>Color</strong></th>
+            <th><strong>Speed</strong></th>
+            <th><strong>Strength</strong></th>
+            <th><strong>Owner</strong></th>
+        </tr>
+        @foreach (var horse in Model.Horses)
+        {
+            <tr>
+                <th>@horse.Id</th>
+                <th>@horse.Name</th>
+                <th>@horse.Color</th>
+                <th>@horse.Speed</th>
+                <th>@horse.Strength</th>
+                <th>@horse.Owner.Name</th>
+            </tr>
+
+        }
+    </table>
+
+    <h2 class="display-4">Weapons</h2>
+    <table>
+        <tr>
+            <th><strong>Id</strong></th>
+            <th><strong>Name</strong></th>
+            <th><strong>Type</strong></th>
+            <th><strong>Owner</strong></th>
+        </tr>
+        @foreach (var weapon in Model.Weapons)
+        {
+    <tr>
+        <th>@weapon.Id</th>
+        <th>@weapon.Name</th>
+        <th>@weapon.Type</th>
+        <th>@weapon.Knight.Name</th>
+    </tr>
+
+        }
+    </table>
+
+    <h2 class="display-4">Vows</h2>
+    <table>
+        <tr>
+            <th><strong>Id</strong></th>
+            <th><strong>Name</strong></th>
+            <th><strong>Description</strong></th>
+        </tr>
+        @foreach (var vow in Model.Vows)
+        {
+            <tr>
+                <th>@vow.Id</th>
+                <th>@vow.Name</th>
+                <th>@vow.Description</th>
+            </tr>
+
+        }
+    </table>
+
+</div>

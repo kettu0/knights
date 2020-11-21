@@ -1,0 +1,22 @@
+﻿
+@{
+    ViewData["Title"] = "Sers";
+}
+<div class="text-center">
+    <h2 class="display-4">SERs</h2>
+    <table>
+        <tr>
+            <th><strong>Id</strong></th>
+            <th><strong>Name</strong></th>
+        </tr>
+        @foreach (var knight in Model)
+        {
+            <tr>
+                <th>@knight.Id</th>
+                <th>@knight.Name</th>
+
+            </tr>
+
+        }
+    </table>
+</div>
